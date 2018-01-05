@@ -3,7 +3,7 @@ News-Found
 
 Um middleware para buscar/ler notícias baseado em estruturas html genéricas e feeds rss.
 
-> *Permite ler de feeds rss e fazer scraping de notícias com alocação dinâmica e genérica de html/css .*
+> *Permite ler matérias de feeds rss e fazer scraping de notícias com alocação dinâmica e genérica de html/css .*
 
 Estrutura de Rotas
 ==============
@@ -31,15 +31,15 @@ Estrutura de Rotas
 
 #### Ordem de execução
 
-1 `./findmediarss ou ./findmediascrap`  
+1 `Acione uma dessas rotas no postman ./findmediarss ou ./findmediascrap`  
 
-2 `Selecione uma url da lista e preencha o valor da proprieda url da rota ./readmedia`
+2 `Selecione uma url da lista e preencha o valor da propriedade url da rota ./readmedia`
 
 3 `Na página html da notícia procure pelo padrão de formatação html/css da exibição da notícia`
 
-4 `Preencha as propriedades [ element_title ] e [ element_description ] com as tags html acompanhadas das classes `
+4 `Preencha as propriedades [element_title] e [element_description] com as tags html com suas classes `
 
-5 `Acione o send do postman para retornar o título e o texto da matéria. Para as demais matérias, altere somente a url.`
+5 `Acione o send do postman para retornar a matéria. Para as demais matérias, altere somente a url.`
 
 ### Exemplo de Requisição
 
@@ -67,13 +67,13 @@ Configure o Content-Type para application/json :
             "titulo": "Brasil deve exportar 67 mi t de soja em 2018/19, queda de 2%",
             "descricao": "O volume esperado para o atual ciclo foi revisado para cima, de 66,75 milhões na previsão de outubro<img alt=\"\" border=\"0\" src=\"https://pixel.wp.com/b.gif?host=exame.abril.com.br&#038;blog=114407448&#038;post=2769707&#038;subd=abrilexame&#038;ref=&#038;feed=1\" width=\"1\" height=\"1\" />",
             "url": "https://exame.abril.com.br/economia/brasil-deve-exportar-67-mi-t-de-soja-em-2018-19-queda-de-2/",
-            "data_hora": "05/January/2018 04:02 pm"
+            "data_hora": "05/01/2018 16:02"
         },
         {
             "titulo": "Poupança tem menor captação líquida desde 2014, diz BC",
             "descricao": "Iniciativas como a liberação das contas inativas do FGTS e a liberação do PIS/Pasep para idosos aumentaram os recursos disponíveis para os trabalhadores<img alt=\"\" border=\"0\" src=\"https://pixel.wp.com/b.gif?host=exame.abril.com.br&#038;blog=114407448&#038;post=2769699&#038;subd=abrilexame&#038;ref=&#038;feed=1\" width=\"1\" height=\"1\" />",
             "url": "https://exame.abril.com.br/economia/poupanca-tem-menor-captacao-liquida-desde-2014-diz-bc/",
-            "data_hora": "05/January/2018 03:53 pm"
+            "data_hora": "05/01/2018 15:53 "
         },
         .
         .
