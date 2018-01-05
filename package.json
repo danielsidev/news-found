@@ -1,0 +1,33 @@
+{
+  "name": "news-found",
+  "version": "1.0.0",
+  "description": "Um buscador/leitor de notícias baseado em estruturas html genéricas e feeds rss.",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Buscador",
+    "Scraping",
+    "Notícias",
+    "News",
+    "Atualidades",
+    "Novidades",
+    "Informações"
+  ],
+  "author": "Daniel Siqueira <http://danielsiqueira.net>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.7.0",
+    "cheerio": "^1.0.0-rc.2",
+    "compression": "^1.6.2",
+    "cors": "^2.8.3",
+    "ejs": "^2.5.5",
+    "express": "^4.16.2",
+    "helmet": "^3.6.0",
+    "moment": "^2.20.1",
+    "request": "^2.83.0",
+    "rss-to-json": "^1.0.3"
+  }
+}

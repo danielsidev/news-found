@@ -1,0 +1,71 @@
+{
+	"variables": [],
+	"info": {
+		"name": "News-Found",
+		"_postman_id": "3993e7b1-25ea-2295-d043-cb2d07f40502",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FIND NEWS RSS",
+			"request": {
+				"url": "http://localhost:9001/news/listmediarss",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\":\"https://exame.abril.com.br/economia/feed/\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "FIND NEWS SCRAPING",
+			"request": {
+				"url": "http://localhost:9001/news/listmediascrap",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\"page\":{\n\t\"url\":\"http://revistapegn.globo.com/noticia/plantao.html\", \n\t\"element_news\":\"div.materia__item, div.materia__item--horizontal\", \n\t\"element_title\":\"h3.materia__item-titulo\", \n\t\"element_description\":\"h4.materia__item-resumo\"\n\t}\n} "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "READ NEWS",
+			"request": {
+				"url": "http://localhost:9001/news/readmedia",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\"page\":{\n\t\"url\": \"http://revistapegn.globo.com/Publicidade/Novo-Citroen-Jumpy/noticia/2018/01/inovacao-e-o-caminho.html\",\n\t\"element_title\":\"h1.interna__titulo\", \n\t\"element_description\":\".materia__wrap-content p\"\n\t}\n} "
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

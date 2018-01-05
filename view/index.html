@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Encontrar Notícias</title>
+    <style type="text/css">
+    .principal{
+      display: block;
+      position: relative;
+      width: 80%;
+      margin: 5% auto;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #000;
+      padding: 10px;
+    }
+    .principal h2{
+      text-align: center;
+      color: #840202;
+    }
+    .principal h4{ text-align: center;}
+    .principal h5{
+      font-weight: bold;
+      font-size: 15px;
+      margin: 1%;
+      background: #333;
+      color: #f0f0f0;
+      border-radius: 5px;
+      padding: 1% 2%;
+      letter-spacing: 2px;
+    }
+    .principal p{
+      display: block;
+          margin: 3% 1%;
+          background: #f0f0f0;
+          border-radius: 5px;
+          padding: 2%;
+          box-shadow: 0px 0px 10px #666;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="principal">
+
+    <h2>News Found Api</h2>
+
+    <h4>Métodos Aceitos</h4>
+    <h5>Prefixo: /news</h5>
+
+    <p>POST => /findmediarss
+      <br/><br/>
+      param send => json { "url":"//page.xml or //page/rss or //page/feed"}
+      <br/><br/>
+      response => json<br /><br/>
+      {"success":true/false, "err":null/err , "error":false/true, "data":[{"titulo", "descricao", "url", "data_hora"}], message:"string customizada com resposta" }
+    </p>
+
+    <p>POST => /findmediascrap
+      <br/><br/>
+      param send => json {"page":{"url":"//page.html", "element_news":"html.css", "element_title":"html.css", "element_description":"html.css"}}
+      <br/><br/>
+      response => json<br /><br/>
+      {"success":true/false, "err":null/err , "error":false/true, "data":[{"titulo", "descricao", "url", "data_hora"}], message:"string customizada com resposta" }
+    </p>
+
+    <p>POST => /readmedia
+      <br/><br/>
+      param send => json {"page":{"url":"//page.html", "element_title":"html.css", "element_description":"html.css"}}
+      <br/><br/>
+      response => json<br /><br/>
+      {"success":true/false, "err":null/err , "error":false/true, "data":{"titulo", "descricao", "url"}, message:"string customizada com resposta" }
+    </p>
+    </div>
+  </body>
+</html>
