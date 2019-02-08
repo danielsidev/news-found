@@ -1,5 +1,0 @@
-* linguist-vendored
-*.js linguist-vendored=true
-*.js linguist-documentation=true
-*.js linguist-language=NodeJS
-
